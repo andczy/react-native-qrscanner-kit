@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moaazsidat/react-native-qrcode-scanner.git"
+    "url": "git+https://github.com/chinaczy/react-native-qrscanner-kit.git"
   },
   "keywords": [
     "react-native",
@@ -19,13 +19,13 @@
     "scanner",
     "barcode"
   ],
-  "author": "Moaaz Sidat",
+  "author": "czy",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/moaazsidat/react-native-qrcode-scanner/issues"
+    "url": "https://github.com/chinaczy/react-native-qrscanner-kit/issues"
   },
   "dependencies": {
     "react-native-camera": "github:chinaczy/react-native-camera"
   },
-  "homepage": "https://github.com/moaazsidat/react-native-qrcode-scanner#readme"
+  "homepage": "https://github.com/chinaczy/react-native-qrscanner-kit#readme"
 }
