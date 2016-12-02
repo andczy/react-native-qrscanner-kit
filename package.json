@@ -1,6 +1,6 @@
 {
   "name": "react-native-qrscanner-kit",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A QR code scanner for React Native.",
   "main": "ScanQRView.js",
   "scripts": {
@@ -25,7 +25,6 @@
     "url": "https://github.com/chinaczy/react-native-qrscanner-kit/issues"
   },
   "dependencies": {
-   // "react-native-camera": "github:chinaczy/react-native-camera"
   },
   "homepage": "https://github.com/chinaczy/react-native-qrscanner-kit#readme"
 }

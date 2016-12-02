@@ -14,7 +14,7 @@ import {
   Easing , 
   Alert 
 } from 'react-native';
-import Camera from './index';
+import Camera from 'react-native-camera';
 export default class ScanQRView extends Component {
   
   constructor(props){
@@ -36,9 +36,14 @@ export default class ScanQRView extends Component {
   componentWillUnmout(){
     
   }
-  scanResult(result){
+  onBarCodeRead(result){
     Vibration.vibrate();
-    Alert.alert( "title " , " scan result = " + result.data , [{text:"ok" , onPress:()=>this.camera.shouldQR()}]) ; 
+    if(this.props.onBarCodeRead)
+    {
+        this.props.onBarCodeRead(result , ()=>this.camera.shouldQR());
+    }
+    else
+      Alert.alert( "扫描结果" , result.data , [{text:"ok" , onPress:()=>this.camera.shouldQR()}] , {cancelable:false}) ; 
     
   }
   render() {
@@ -55,7 +60,7 @@ export default class ScanQRView extends Component {
           ref={(cam) => {
             this.camera = cam;
           }}
-          onBarCodeRead={this.scanResult.bind(this)}
+          onBarCodeRead={this.onBarCodeRead.bind(this)}
           /> 
         <View
           style={{position:'absolute' , left:0 , right:0, top:0 , bottom:0}}
