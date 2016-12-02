@@ -25,7 +25,7 @@
     "url": "https://github.com/chinaczy/react-native-qrscanner-kit/issues"
   },
   "dependencies": {
-    "react-native-camera": "github:chinaczy/react-native-camera"
+   // "react-native-camera": "github:chinaczy/react-native-camera"
   },
   "homepage": "https://github.com/chinaczy/react-native-qrscanner-kit#readme"
 }
