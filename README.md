@@ -60,7 +60,7 @@
 
 
 ## Usage
-	```
+```
 import Scan from 'react-native-qrscanner-kit' ;
 ...
 scanResult(data , callback){
@@ -79,5 +79,5 @@ scanResult(data , callback){
     );
   }
 }
-	```
+```
 [more about Camera go to](https://github.com/chinaczy/react-native-camera)
