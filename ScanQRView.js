@@ -34,16 +34,16 @@ export default class ScanQRView extends Component {
                        ]).start(()=>this.scanLineAnimation()) ;
   }
   componentWillUnmout(){
-    
+    this.camera&&this.camera.shouldQR();
   }
   onBarCodeRead(result){
     Vibration.vibrate();
     if(this.props.onBarCodeRead)
     {
-        this.props.onBarCodeRead(result , ()=>this.camera.shouldQR());
+        this.props.onBarCodeRead(result , ()=>{this.camera.shouldQR();});
     }
     else
-      Alert.alert( "扫描结果" , result.data , [{text:"ok" , onPress:()=>this.camera.shouldQR()}] , {cancelable:false}) ; 
+      Alert.alert( "扫描结果" , result.data , [{text:"ok" , onPress:()=>this.camera&&this.camera.shouldQR()}] , {cancelable:false}) ; 
     
   }
   render() {
@@ -65,11 +65,11 @@ export default class ScanQRView extends Component {
         <View
           style={{position:'absolute' , left:0 , right:0, top:0 , bottom:0}}
           >
-          <View style={{width:width , height:scanRectWidth , backgroundColor:scanCoverColor}}/>
+          <View style={{width:width , height:scanRectWidth /2, backgroundColor:scanCoverColor}}/>
           <View style={{width:width , height:scanRectWidth ,flexDirection:'row'}}>
             <View style={{flex:1,backgroundColor:scanCoverColor}}/>
             <View style={{width:scanRectWidth}}>
-              <Animated.View style={{width:scanRectWidth , height:2 , backgroundColor:"#fe2233" , transform:[
+              <Animated.View style={{width:scanRectWidth , height:2 , backgroundColor:"#1dacf9" , transform:[
                                      {translateY:this.state.scanTranslte}
                                    ] }}/>
             </View>
